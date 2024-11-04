@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef} from "react";
 import { motion } from "framer-motion";
 import { cn } from "../utils";
 
@@ -9,7 +9,6 @@ interface Props {
 
 export const CategoryItem: React.FC<Props> = ({ className, imageUrl }) => {
   const continerRef = useRef<HTMLDivElement | null>(null);
-  const [width, setWidth] = useState(0);
 
   const [displayState, setDisplayState] = useState<
     "default" | "hover" | "click"
@@ -21,11 +20,6 @@ export const CategoryItem: React.FC<Props> = ({ className, imageUrl }) => {
     setDisplayState("default");
   };
 
-  useEffect(() => {
-    if (!continerRef.current) return;
-
-    setWidth(continerRef.current.offsetWidth);
-  }, []);
   return (
     <div
       ref={continerRef}
@@ -51,7 +45,7 @@ export const CategoryItem: React.FC<Props> = ({ className, imageUrl }) => {
                 left: "-220px",
               }
         }
-        transition={{ ease: "easeIn", duration:0.5 }}
+        transition={{ ease: "easeIn", duration: 0.5 }}
         className="flex rotate-[9deg] bg-white/10  backdrop-blur-sm  absolute w-40 h-[140%] -top-10  overflow-visible justify-center  z-30  "
       >
         <div

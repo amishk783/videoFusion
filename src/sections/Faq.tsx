@@ -1,9 +1,8 @@
 import { Accordion } from "../components/Accordion/Accordion";
-import React, { useState } from "react";
+
 import { AccordionContent } from "../components/Accordion/AccordionContent";
 import { AccordionItem } from "../components/Accordion/ AccordionItem";
 import { AccordionTrigger } from "../components/Accordion/AccordionTrigger";
-import { motion } from "framer-motion";
 
 const faqContent = [
   {
@@ -35,11 +34,11 @@ const faqContent = [
 ];
 export const Faq = () => {
   return (
-    <div className=" flex items-center h-min overflow-visible relative w-full font-syne pb-10  ">
+    <div className=" flex items-center h-min overflow-visible relative w-full font-syne   ">
       <div className="flex flex-col items-start basis-0 flex-grow flex-shrink-0 h-min max-container xl:px-24 xl:py-12 relative bg-black/30 gap-60">
         <div className=" h-full w-[90%] overflow-hidden -z-10 absolute ">
           <img
-            className=" w-full h-full object-cover  object-center"
+            className=" w-full h-[90%] object-cover  object-center"
             src="/src/assets/servicesBg.svg"
           ></img>
         </div>
@@ -53,6 +52,7 @@ export const Faq = () => {
             <Accordion>
               {faqContent.map((item, index) => (
                 <AccordionItem
+                  key={index}
                   className=" text-white bg-transparent"
                   value={index + 1}
                 >

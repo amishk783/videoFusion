@@ -47,9 +47,9 @@ export const Portfolio = () => {
     x: 0,
     y: 0,
   });
-  console.log("🚀 ~ Portfolio ~ mousePosition:", mousePosition);
+
   useEffect(() => {
-    const moveCursor = (e) => {
+    const moveCursor = (e: MouseEvent) => {
       setMousePosition({
         x: e.clientX,
         y: e.clientY,
@@ -161,6 +161,7 @@ export const Portfolio = () => {
           {videoItem.map((item, index) => (
             <VideoCarasoulItem
               {...item}
+              key={index}
               isVideoPlay={isVideoIndex === index ? true : false}
             />
           ))}

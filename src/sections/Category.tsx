@@ -1,3 +1,4 @@
+import { Button } from "../components/Button";
 import { CategoryItem } from "../components/CategoryItem";
 
 export const Category = () => {
@@ -43,7 +44,7 @@ export const Category = () => {
             />
           </div>
         </div>
-        <div></div>
+        <div className=""><Button>Explore All Categories</Button></div>
       </div>
     </section>
   );

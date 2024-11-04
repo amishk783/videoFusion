@@ -1,6 +1,6 @@
 import { cn } from "../../utils";
-import { motion, useAnimationControls } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+
+import React from "react";
 
 interface Props {
   className?: string;
@@ -16,7 +16,7 @@ export const Slider: React.FC<Props> = ({
   speed = 36,
 }) => {
   const slides = React.Children.toArray(children);
-  const duplicatedSlides = [...slides, ...slides];
+
   const slideSpeed = `${speed}s`;
   return (
     <>

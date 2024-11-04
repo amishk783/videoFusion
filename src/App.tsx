@@ -5,7 +5,7 @@ import "./App.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Play } from "lucide-react";
 import { Button } from "./components/Button";
-import { VideoCarasoulItem } from "./components/VideoCarasoulItem";
+
 import { Portfolio } from "./sections/Portfolio";
 import { Services } from "./sections/Services";
 import { Category } from "./sections/Category";
@@ -19,14 +19,9 @@ function App() {
     offset: ["start end", "end start"],
   });
   const section2Ref = useRef(null);
-  const section3Ref = useRef(null);
+
   const { scrollYProgress: scrollYProgress1 } = useScroll({
     target: section2Ref,
-    // offset: ["start end", "end start"],
-  });
-  const { scrollYProgress: scrollYProgress2 } = useScroll({
-    target: section3Ref,
-    // offset: ["start end", "end start"],
   });
 
   const slides: string[] = [
@@ -39,48 +34,7 @@ function App() {
     "/src/assets/slides/slide7.svg",
     "/src/assets/slides/slide8.svg",
   ];
-  // const slides: string[] = [
-  //   "Innovative solutions for your digital transformation.",
-  //   "Boost your online presence with our expert strategies.",
-  //   "Creative designs that captivate and convert.",
-  //   "Maximize ROI with tailored marketing campaigns.",
-  //   "Your vision, our expertise—let's build something great.",
-  // ];
 
-  interface videoItemType {
-    title: string;
-    subTitle: string;
-    video: string;
-  }
-
-  const videoItem: videoItemType[] = [
-    {
-      title: "Green Waves",
-      subTitle: "Eco Warriors",
-      video: "/src/assets/featuresVideo/video1.mp4",
-    },
-    {
-      title: "Green Waves",
-      subTitle: "Eco Warriors",
-      video: "/src/assets/featuresVideo/video2.mp4",
-    },
-    {
-      title: "Green Waves",
-      subTitle: "Eco Warriors",
-      video: "/src/assets/featuresVideo/video3.mp4",
-    },
-    {
-      title: "Green Waves",
-      subTitle: "Eco Warriors",
-      video: "/src/assets/featuresVideo/video3.mp4",
-    },
-    {
-      title: "Green Waves",
-      subTitle: "Eco Warriors",
-      video: "/src/assets/featuresVideo/video3.mp4",
-    },
-  ];
-  console.log("🚀 ~ App ~ scrollYProgress:", scrollYProgress);
   const rotateX = useTransform(scrollYProgress, [1, 0.5], ["-30deg", "0deg"]);
   const translateY = useTransform(scrollYProgress, [1, 0.5], [1, 0.6]);
   const scale = useTransform(scrollYProgress, [1, 0.5], [0.8, 1]);
@@ -127,6 +81,7 @@ function App() {
                 commercials, corporate videos, social ads, and many more.
               </p>
             </div>
+            <Button>Buy this template</Button>
           </div>
         </div>
       </motion.section>
@@ -234,8 +189,8 @@ function App() {
       <Category />
 
       {/* about us */}
-      <div className=" flex items-center h-min overflow-visible relative w-full font-syne pb-10 max-sm:bg-black max-sm:px-5  ">
-        <div className="flex flex-col xl:flex-row items-start basis-0 flex-grow flex-shrink-0 h-min max-container xl:px-24 xl:py-12 relative bg-black/30 gap-5 xl:gap-60">
+      <div className=" flex items-center h-min overflow-visible relative w-full font-syne max-sm:bg-black max-sm:px-5  ">
+        <div className="flex flex-col xl:flex-row items-start basis-0 flex-grow flex-shrink-0 h-min max-container xl:px-24 xl:py-20 relative bg-black/30 gap-5 xl:gap-60">
           {/* bg  */}
           <div className=" h-full w-[90%] overflow-hidden -z-10 absolute pointer-events-none">
             <img
