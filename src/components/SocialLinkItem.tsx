@@ -20,7 +20,8 @@ export const SocialLinkItem: React.FC<Props> = ({ svgPath, name, link }) => {
   };
 
   return (
-    <motion.div
+    <motion.a
+      href={link}
       animate={
         displayState === "hover"
           ? { borderWidth: "1px", borderColor: "rgb(255 255 255 / 0.3)" }
@@ -58,7 +59,7 @@ export const SocialLinkItem: React.FC<Props> = ({ svgPath, name, link }) => {
             {svgPath}
           </svg>
         </motion.div>
-        <p className="">TWITTER</p>
+        <p className="">{name}</p>
       </motion.div>
       <motion.div
         animate={
@@ -91,6 +92,6 @@ export const SocialLinkItem: React.FC<Props> = ({ svgPath, name, link }) => {
           </svg>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </motion.a>
   );
 };
