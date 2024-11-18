@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { cn } from "../utils";
 import { SocialLinkItem } from "./SocialLinkItem";
-
+import footerBg from "../assets/servicesBg.svg";
 export const Footer = () => {
   const [displayState, setDisplayState] = useState<"default" | "hover">(
     "default"
@@ -42,7 +42,7 @@ export const Footer = () => {
           <div className=" h-full w-[90%] overflow-hidden -z-10 absolute pointer-events-none">
             <img
               className=" w-full h-full object-cover  object-center"
-              src="/src/assets/servicesBg.svg"
+              src={footerBg}
             ></img>
           </div>
           <div className="flex w-full h-min justify-center items-center">

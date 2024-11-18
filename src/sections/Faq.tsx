@@ -3,7 +3,7 @@ import { Accordion } from "../components/Accordion/Accordion";
 import { AccordionContent } from "../components/Accordion/AccordionContent";
 import { AccordionItem } from "../components/Accordion/ AccordionItem";
 import { AccordionTrigger } from "../components/Accordion/AccordionTrigger";
-
+import faqBg from "../assets/servicesBg.svg";
 const faqContent = [
   {
     question: "How do I get started with building a WordPress website?",
@@ -39,7 +39,7 @@ export const Faq = () => {
         <div className=" h-full w-[90%] overflow-hidden -z-10 absolute ">
           <img
             className=" w-full h-[90%] object-cover  object-center"
-            src="/src/assets/servicesBg.svg"
+            src={faqBg}
           ></img>
         </div>
         <div className="flex flex-col w-full justify-center max-sm:px-2 gap-14  py-10 ">

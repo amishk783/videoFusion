@@ -4,14 +4,19 @@ import { Slide } from "./components/Slider/Slide";
 import "./App.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Play } from "lucide-react";
-import { Button } from "./components/Button";
 
+import reelVideo from "./assets/video.mp4";
+import serviceBg from "./assets/servicesBg.svg";
+import { Button } from "./components/Button";
+import heroBg from "./assets/heroBg.png";
 import { Portfolio } from "./sections/Portfolio";
 import { Services } from "./sections/Services";
 import { Category } from "./sections/Category";
 import { Faq } from "./sections/Faq";
 import { Blog } from "./sections/Blog";
 import { Footer } from "./components/Footer";
+import testimonial from "./assets/testimonial.jpg";
+
 function App() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -65,7 +70,7 @@ function App() {
           <motion.div className="absolute w-full h-screen will-change-transform">
             <img
               className="w-full h-full object-center object-cover"
-              src="/src/assets/heroBg.png"
+              src={heroBg}
               alt="Background"
             />
           </motion.div>
@@ -130,7 +135,7 @@ function App() {
             </div>
             <div className=" h-full relative w-full">
               <video
-                src="/src/assets/video.mp4"
+                src={reelVideo}
                 loop
                 muted
                 autoPlay
@@ -143,7 +148,7 @@ function App() {
           <div className=" w-full h-full px-4 sm:hidden rounded-3xl pb-10">
             {" "}
             <video
-              src="/src/assets/video.mp4"
+              src={reelVideo}
               loop
               muted
               autoPlay
@@ -195,7 +200,7 @@ function App() {
           <div className=" h-full w-[90%] overflow-hidden -z-10 absolute pointer-events-none">
             <img
               className=" w-full h-full object-cover  object-center"
-              src="/src/assets/servicesBg.svg"
+              src={serviceBg}
             ></img>
           </div>
           {/* left part */}
@@ -303,7 +308,7 @@ function App() {
         <div className=" h-full w-full overflow-hidden -z-10 absolute pointer-events-none">
           <img
             className=" w-full h-full object-cover  object-center"
-            src="src/assets/testimonial.jpg"
+            src={testimonial}
           ></img>
         </div>
         <div className=" w-full h-full px-12 py-28 relative ">

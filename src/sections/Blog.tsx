@@ -1,9 +1,11 @@
 import { BlogItem } from "../components/BlogItem";
 import { Button } from "../components/Button";
-
+import blog1 from "../assets/blogItem/blogItem1.jpg";
+import blog2 from "../assets/blogItem/blogItem2.png";
+import blog3 from "../assets/blogItem/blogItem3.jpg";
 const blogs = [
   {
-    imageUrl: "src/assets/blogItem/blogItem1.jpg",
+    imageUrl: blog1,
     subTitle: "News",
     title:
       " StoryStream's Video Production Career Opportunities and Upcoming Event",
@@ -11,7 +13,7 @@ const blogs = [
     date: "Aug 29,2023",
   },
   {
-    imageUrl: "src/assets/blogItem/blogItem2.png",
+    imageUrl: blog2,
     subTitle: "News",
     title:
       " StoryStream's Video Production Career Opportunities and Upcoming Event",
@@ -19,7 +21,7 @@ const blogs = [
     date: "Aug 29,2023",
   },
   {
-    imageUrl: "src/assets/blogItem/blogItem3.jpg",
+    imageUrl: blog3,
     subTitle: "News",
     title:
       " StoryStream's Video Production Career Opportunities and Upcoming Event",

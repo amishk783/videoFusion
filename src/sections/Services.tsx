@@ -1,24 +1,29 @@
 import { Button } from "../components/Button";
 import { ServiceItem } from "../components/ServiceItem";
 
+import serviceImage1 from "../assets/serviceItem/serviceItem1.jpg";
+import serviceImage2 from "../assets/serviceItem/serviceItem2.jpg";
+import serviceImage3 from "../assets/serviceItem/serviceItem3.jpg";
+
+import serviceBg from "../assets/servicesBg.svg";
 const services = [
   {
     title: "Pre Production",
     description:
       "Pre-production serves as the pivotal phase in any creative endeavor, encompassing planning, idea refinement, budgeting, schedule creation, and the meticulous organization of logistical details.",
-    bgImageUrl: "/src/assets/serviceItem/serviceItem1.jpg",
+    bgImageUrl: serviceImage1,
   },
   {
     title: "Production",
     description:
       "Production represents the dynamic phase of a creative project, where the plans from pre-production spring to life, with cameras rolling, actors delivering their performances, and the realization of the creative vision.",
-    bgImageUrl: "/src/assets/serviceItem/serviceItem2.jpg",
+    bgImageUrl: serviceImage2,
   },
   {
     title: "Post Production",
     description:
       "Post-production emerges as the pivotal phase in creative projects, wherein raw content undergoes a transformation into its refined, polished state where editing, sound design, visual effects, and essential adjustments to breathe life into the project.",
-    bgImageUrl: "/src/assets/serviceItem/serviceItem3.jpg",
+    bgImageUrl: serviceImage3,
   },
 ];
 
@@ -31,7 +36,7 @@ export const Services = () => {
         <div className=" h-full w-[90%] overflow-hidden -z-10 absolute pointer-events-none">
           <img
             className=" w-full h-full object-cover  object-center"
-            src="/src/assets/servicesBg.svg"
+            src={serviceBg}
           ></img>
         </div>
         {/* left part */}

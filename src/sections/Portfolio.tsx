@@ -4,6 +4,12 @@ import { VideoCarasoulItem } from "../components/VideoCarasoulItem";
 import { useRef, useEffect, useState, useCallback } from "react";
 import { useIsMobile } from "../hooks/useMobile";
 
+import video1 from "../assets/featuresVideo/video1.mp4";
+import video2 from "../assets/featuresVideo/video2.mp4";
+import video3 from "../assets/featuresVideo/video3.mp4";
+import video4 from "../assets/featuresVideo/video4.mp4";
+import video5 from "../assets/featuresVideo/video5.mp4";
+
 interface videoItemType {
   title: string;
   subTitle: string;
@@ -14,27 +20,27 @@ const videoItem: videoItemType[] = [
   {
     title: "Green Waves",
     subTitle: "Eco Warriors",
-    video: "/src/assets/featuresVideo/video1.mp4",
+    video: video1,
   },
   {
     title: "Mystic Horizons",
     subTitle: "ModeElite",
-    video: "/src/assets/featuresVideo/video2.mp4",
+    video: video2,
   },
   {
     title: "Pixel Fusion",
     subTitle: "Techno",
-    video: "/src/assets/featuresVideo/video3.mp4",
+    video: video3,
   },
   {
     title: "EcoExplorer",
     subTitle: "GreenEarth",
-    video: "/src/assets/featuresVideo/video3.mp4",
+    video: video4,
   },
   {
     title: "Urban Uplift",
     subTitle: "Metroscope",
-    video: "/src/assets/featuresVideo/video5.mp4",
+    video: video5,
   },
 ];
 export const Portfolio = () => {
