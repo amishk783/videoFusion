@@ -1,7 +1,7 @@
-import { useState, useRef} from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../utils";
-
+import overlayBg from "../assets/servicesBg.svg";
 interface Props {
   className?: string;
   imageUrl: string;
@@ -86,7 +86,7 @@ export const CategoryItem: React.FC<Props> = ({ className, imageUrl }) => {
       <motion.div className=" h-full w-[90%] overflow-hidden -z-10 absolute pointer-events-none">
         <img
           className=" w-full h-full object-cover  object-center"
-          src="/src/assets/servicesBg.svg"
+          src={overlayBg}
         ></img>
       </motion.div>
       <div className=" flex flex-start h-min mix-blend-difference overflow-visible relative w-full p-5">

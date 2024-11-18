@@ -5,18 +5,39 @@ import "./App.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Play } from "lucide-react";
 
-import reelVideo from "./assets/video.mp4";
-import serviceBg from "./assets/servicesBg.svg";
 import { Button } from "./components/Button";
-import heroBg from "./assets/heroBg.png";
+import { Footer } from "./components/Footer";
 import { Portfolio } from "./sections/Portfolio";
 import { Services } from "./sections/Services";
 import { Category } from "./sections/Category";
 import { Faq } from "./sections/Faq";
 import { Blog } from "./sections/Blog";
-import { Footer } from "./components/Footer";
-import testimonial from "./assets/testimonial.jpg";
 
+import {
+  slide1,
+  slide2,
+  slide3,
+  slide4,
+  slide5,
+  slide6,
+  slide7,
+  slide8,
+  serviceBg,
+  reelVideo,
+  heroBg,
+  testimonial,
+} from "./utils";
+
+const slides: string[] = [
+  slide1,
+  slide2,
+  slide3,
+  slide4,
+  slide5,
+  slide6,
+  slide7,
+  slide8,
+];
 function App() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -28,17 +49,6 @@ function App() {
   const { scrollYProgress: scrollYProgress1 } = useScroll({
     target: section2Ref,
   });
-
-  const slides: string[] = [
-    "/src/assets/slides/slide1.svg",
-    "/src/assets/slides/slide2.svg",
-    "/src/assets/slides/slide3.svg",
-    "/src/assets/slides/slide4.svg",
-    "/src/assets/slides/slide5.svg",
-    "/src/assets/slides/slide6.svg",
-    "/src/assets/slides/slide7.svg",
-    "/src/assets/slides/slide8.svg",
-  ];
 
   const rotateX = useTransform(scrollYProgress, [1, 0.5], ["-30deg", "0deg"]);
   const translateY = useTransform(scrollYProgress, [1, 0.5], [1, 0.6]);
